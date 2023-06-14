@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/6884aa9842.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="nav" id="navbar">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="#welcome-section">About</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- END NAVBAR -->
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+      <!-- WELCOME SECTION -->
+
+      <section id="welcome-section" class="welcome-section">
+        <h1>Hi I'm Bob</h1>
+        <p>Front-end web developer</p>
+      </section>
+
+      <!-- END WELCOME SECTION -->
+
+      <!-- PROJECTS SECTION -->
+
+      <section id="projects" class="projects-section">
+        <h2 class="project-section-header">Here are some of my projects</h2>
+
+        <!-- PONG GAME PROJECT-->
+
+        <div class="project-grid">
+          <a
+            href="https://github.com/Master-Code234/pong-game"
+            target="_blank"
+            class="project-tile"
+            id="profile-link"
+          >
+            <img
+              src="https://github.com/Master-Code234/personal-portfolio-react/blob/main/images/pong.png?raw=true"
+              alt="picture of a pong game project"
+              srcset=""
+              loading="lazy"
+              class="project-img"
+            />
+
+            <h3 class="project-title">Pong Game</h3>
+          </a>
+
+          <!-- WEATHER APP -->
+          <a
+            href="https://github.com/Master-Code234/simple-weather-app"
+            target="_blank"
+            class="project-tile"
+          >
+            <img
+              src="https://github.com/Master-Code234/personal-portfolio-react/blob/main/images/weatherapp.png?raw=true"
+              alt="picture of a weather app"
+              srcset=""
+              loading="lazy"
+              class="project-img"
+            />
+
+            <h3 class="project-title">Weather App</h3>
+          </a>
+
+          <!-- BLOG POST APP -->
+
+          <a
+            href="https://github.com/Master-Code234/blog-post-frontend"
+            class="project-tile"
+            target="_blank"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/126014289/242624128-d988ab8c-2a38-4142-ac53-ba0561d679de.png"
+              alt="picture of a blog post app"
+              srcset=""
+              loading="lazy"
+              class="project-img"
+            />
+
+            <h3 class="project-title">Blog post App</h3>
+          </a>
+        </div>
+      </section>
+      <!-- END PROJECTS SECTION -->
+
+      <!-- CONTACT SECTION -->
+
+      <section id="contact" class="contact-section">
+        <h3 class="contact-section-header">Contact me!</h3>
+        <div class="contact-links">
+          <a href="" target="_blank" class="contact-link">
+            <i class="fa-brands fa-linkedin-in" style="color: #000000"></i>
+          </a>
+          <a href="" target="_blank" class="contact-link">
+            <i class="fa-brands fa-square-github"></i>
+          </a>
+          <a href="" target="_blank" class="contact-link">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- END CONTACT SECTION -->
+
+    <!-- FOOTER SECTION -->
+
+    <footer>
+      <hr />
+      <p>&copy; bob 2019</p>
+    </footer>
+    <!-- END FOOTER SECTION -->
+  </body>
+</html>
