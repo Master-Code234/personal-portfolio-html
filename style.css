@@ -1,0 +1,243 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES */
+
+:root {
+  --navbar-bg-color: hsl(200, 6%, 10%);
+  --main-font-color: hsl(0, 0%, 100%);
+  --primary-color: #ff0044;
+
+  --font-size-reg: 1.125rem;
+  --font-size-large: 2rem;
+  --font-size-medium: 1.25rem;
+}
+
+html {
+  font-size: 1.4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+}
+
+p {
+  font-size: var(--font-size-medium);
+}
+
+/* NAVBAR */
+.nav {
+  background-color: var(--navbar-bg-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.nav-list,
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  gap: 1rem;
+  margin-right: 2rem;
+  text-decoration: none;
+  list-style: none;
+  color: var(--main-font-color);
+  border: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  border-radius: 2px;
+  width: 0;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.welcome-content {
+  margin: 1rem auto;
+}
+
+.header-name {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* PROJECTS SECTION */
+
+.projects-section {
+  text-align: center;
+  background: linear-gradient(45deg, #2e2c2b 50%, #322f2f 50%);
+  color: var(--main-font-color);
+  width: 100%;
+  height: 70vh;
+  padding: 10rem 2rem;
+}
+
+.project-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  font-size: var(--font-size-large);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.projects-section-header {
+  margin: 0 auto 6rem auto;
+}
+
+.project-img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile {
+  text-decoration: none;
+  color: var(--main-font-color);
+  border: none;
+}
+
+.project-tile:hover {
+  color: var(--primary-color);
+  opacity: 90%;
+}
+
+.project-title {
+  background-color: rgb(28, 28, 28);
+  padding: 1rem 0.7rem;
+  border-radius: 4px;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  background: linear-gradient(45deg, #000000, #272525);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  font-size: var(--font-size-large);
+}
+i {
+  color: #ff0044;
+  margin: 0.3rem;
+  padding: 0.2rem;
+}
+
+i:hover {
+  background-color: #818181;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* Footer */
+
+footer {
+  padding: 2rem;
+  background-color: #272525;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+
+  .project-grid,
+  .project-section {
+    margin: 0;
+  }
+  .project-grid {
+    padding: 2rem;
+  }
+  .contact-section {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 0.5rem;
+  }
+  main {
+    width: 100%;
+  }
+
+  .projects-section {
+    padding: 0;
+  }
+  .project-grid {
+    padding: 2rem;
+  }
+
+  .welcome-section {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .welcome-img {
+    max-width: 50%;
+  }
+
+  .nav ul {
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
